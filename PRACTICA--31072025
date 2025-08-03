@@ -99,4 +99,5 @@ header("HTTP/1.1 ".$codigo_estado." ".$texto_estado);
 header("Content-Type: Application/json");
 echo(json_encode($arreglo_respuesta));
 
+
 ?>
