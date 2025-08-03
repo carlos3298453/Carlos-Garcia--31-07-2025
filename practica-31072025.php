@@ -76,7 +76,7 @@ if(in_array($_SERVER["HTTP_HOST"],$host_aceptados)){
 }else{
     //La direcci[o]n ip no es aceptada
     $ruta = "";
-    $msg = "SU EQUIPO NO EST[A] AUTORIZADO PARA REALIZAR ESTA PETICI[O]N";
+    $msg = "SU EQUIPO NO EST[A] AUTORIZADO PARA REALIZAR LA PETICI[O]N";
     $codigo_estado = 403;
     $texto_estado = "Forbidden";
 
@@ -96,7 +96,8 @@ $arreglo_respuesta = array(
 );
 
 header("HTTP/1.1 ".$codigo_estado." ".$texto_estado);
-header("Content-Type: Applicatio/json");
+header("Content-Type: Application/json");
 echo(json_encode($arreglo_respuesta));
+
 
 ?>
